@@ -1,0 +1,1 @@
+Please edit <kbd>ADMIN.md</kbd> in your plugin's root folder to change this message.

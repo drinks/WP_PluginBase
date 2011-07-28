@@ -1,7 +1,7 @@
 <div class="wrap">
     <h2><?php echo $settings_page_title; ?></h2>
     <?php if($description): ?>
-    <div class="sunlight-description">
+    <div class="plugin-description">
         <?php echo (function_exists('Markdown') ? Markdown($description) : nl2br($description)); ?>
     </div><br/>
     <?php endif; ?>
