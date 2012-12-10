@@ -7,7 +7,6 @@
     <?php endif; ?>
     <form method="post" action="options.php">
         <?php settings_fields($settings_namespace . '_options'); ?>
-        <?php $options = get_option($settings_namespace);?>
         <table class="form-table">
             <?php foreach($plugin_settings as $setting): ?>
             <tr valign="top">
@@ -42,7 +41,7 @@
                         <input id="<?php echo $settings_namespace; ?>_<?php echo $setting['slug']; ?>"
                                name="<?php echo $settings_namespace; ?>[<?php echo $setting['slug']; ?>]"
                                type="text"
-                               value="<?php echo $options[$setting['slug']]; ?>" />
+                               value="<?php echo (isset($options[$setting['slug']])) ? $options[$setting['slug']] : ""; ?>" />
                     <?php
                         break;
                     }?>
